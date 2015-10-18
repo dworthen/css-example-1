@@ -5,42 +5,35 @@
     <title>Sonnet: to Science - The Mini Site</title>
     <meta name="description" content="The advanced markup and page layout assignment.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- #container: Added a div to wrap the entire page -->
+  <div id="container">
+
     <header>
-        <div id="header">
-		<h1>Sonnet: to Science</h1>
-		</div>
-		<hr>
+      <div id="header">
+    	   <h1>Sonnet: to Science</h1>
+    	</div>
+  		<hr>
         <nav>
-            <ul class="top-nav">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about-poe.html">About Poe</a></li>
-                <li><a href="interpretation.html">Interpretation</a></li>
-            </ul>
+          <ul class="top-nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about-poe.html">About Poe</a></li>
+            <li><a href="interpretation.html">Interpretation</a></li>
+          </ul>
         </nav>
-		<hr>
+  		<hr>
     </header>
-    <aside id="sidebar" class="poem-sidebar">
-        <h2>Did you know?</h2>
-        <p>
-            Poe is often credited with being an early pioneer of Science
-            Fiction since he published "The Balloon-Hoax" in 1844, and he is
-            also credited with inventing the Mystery/Detective story genre
-            with the first detective story (&ldquo;The Murders in the Rue
-            Morgue&rdquo; &ndash; 1841).
-        </p>
-        <h2>Share This!</h2>
-        <ul id="social-links">
-            <li><a class="twitter" href="http://twitter.com">Twitter</a></li>
-            <li><a class="facebook" href="http://facebook.com">Facebook</a></li>
-            <li><a class="pinterest" href="http://pinterest.com">Pinterest</a></li>
-        </ul>
-    </aside>
-    <section id="content">
+
+    <!-- #content: wraps all the content outside of the header and footer. -->
+    <div id="content1">
+
+      <!-- #main: wraps the main left column -->
+      <div id="main" class="floatLeft">
         <ul class="poem">
-			<li><span class="first-word">Science!</span> true daughter of Old Time thou art!</li>
+  		       <li><span class="first-word">Science!</span> true daughter of Old Time thou art!</li>
             <li>Who alterest all things with thy peering eyes.</li>
             <li>Why preyest thou thus upon the poet's heart,</li>
             <li>Vulture, whose wings are dull realities?</li>
@@ -55,7 +48,49 @@
             <li>The Elfin from the green grass, and from me</li>
             <li>The summer dream beneath the tamarind tree?</li>
         </ul>
-    </section>
+      </div><!-- End #main -->
+
+      <!-- rearanged the sidebar to be after the main content since
+        the main content comes first in appearance
+      -->
+      <div id="sidebar1" class="floatLeft">
+          <h2>Did you know?</h2>
+          <p>
+              Poe is often credited with being an early pioneer of Science
+              Fiction since he published "The Balloon-Hoax" in 1844, and he is
+              also credited with inventing the Mystery/Detective story genre
+              with the first detective story (&ldquo;The Murders in the Rue
+              Morgue&rdquo; &ndash; 1841).
+          </p>
+          <h2>Share This!</h2>
+          <ul id="social-links">
+              <li>
+                <i class="fa fa-twitter-square"></i>
+                <a class="twitter" href="http://twitter.com">Twitter</a>
+              </li>
+              <li><a class="facebook" href="http://facebook.com">Facebook</a></li>
+              <li><a class="pinterest" href="http://pinterest.com">Pinterest</a></li>
+          </ul>
+      </div><!-- End #sidebar -->
+
+      <!--
+      * This clears the floated main and sidebar divs so that the content div
+      * properly contains the floated divs. Without this the content
+      * below will try
+      * to float alongside the main and sidebar divs. The clearfix must
+      * be applied after any floated content but within the parent element
+      * of the floated content. In this case it is applied after the
+      * floated sidebar1 and within the #content1 parent.
+      * "clear: both" can be applied to any element after the floated content
+      * and in this case it is applied to a new/empty line. This is how I
+      * commonly clear floated content
+      -->
+      <br class="clear" />
+
+    </div><!-- End #content -->
+
+
+
     <footer>
 		<hr>
         <nav>
@@ -77,5 +112,6 @@
 		</div>
         </p>
     </footer>
+  </div><!-- End #container -->
 </body>
 </html>

@@ -1,12 +1,69 @@
 /* Styles for the Advanced Markup assignment. */
 
+/**
+* Styles Added by Derek
+**/
+
+body {
+  background-color: #CBD4C2;
+  color: #262730;
+  padding: 0;
+  margin: 0;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Wraps all the content on the page */
+#container {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+#content1 {
+  margin: 30px 0;
+}
+
+/*
+* Floated divs do not take up the entire width of their parent container
+* so we provide a width. In this case we provide a flexible width.
+*/
+#main {
+  width: 1000px;
+}
+
+/* Clear margin and padding on the index page as that is taken care of by the content div.*/
+#sidebar1 {
+  width: 232px; /* Remaining space - border left and right - padding left and right */
+  margin: 0;
+  padding: 10px;
+  background: #A8A4AE;
+  border: 4px solid #262730;
+}
+
+#main .poem {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/*
+* End of styles added by Derek
+*/
+
+/*
+* I tend to not add any styling to the body other than global font color, size and background color and clear out margin and padding.
 body {
    	background-color: #CBD4C2;
 	color: #262730;
 	padding-left: 75px;
     padding-right: 75px;
 	margin: 0;
-}
+}*/
 #header {
 	padding-bottom: 1em;
 	padding-top: 1em;
@@ -94,7 +151,7 @@ a:hover {
 	font-style: italic;
 }
 table {
-   	border-spacing: 1em; 
+   	border-spacing: 1em;
 	width: 500px;
 	margin: 3em auto 1em auto;
 	padding: 1em;
@@ -103,7 +160,7 @@ caption {
 	font-weight: bold;
 }
 table td, table th {
-    padding: 0.5em; 
+    padding: 0.5em;
 }
 hr {
  	margin-top: 3px;
